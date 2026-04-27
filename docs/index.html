@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahjony Capital LLC - Lobsterboard UI</title>
+    <meta name="description" content="Real Estate Wholesale Platform with Lobsterboard Dashboard">
+    <link rel="icon" href="/favicon.svg">
+    <script type="module" crossorigin src="/assets/index-D4wtKdaX.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/styles-B7D1LqcE.css">
+</head>
+<body>
+    <div id="root">
+        <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background: #0a0a0a; color: white; font-family: Arial, sans-serif;">
+            <div style="text-align: center;">
+                <h1>Sahjony Capital LLC</h1>
+                <h2>Lobsterboard UI</h2>
+                <p>Loading Real Estate Wholesale Platform...</p>
+                <p>If this message persists, please refresh the page.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Simple script to handle loading
+        setTimeout(() => {
+            const loadingDiv = document.getElementById('root');
+            if (loadingDiv) {
+                loadingDiv.innerHTML = '<p>Application loading failed. Please check browser console for errors.</p>';
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
