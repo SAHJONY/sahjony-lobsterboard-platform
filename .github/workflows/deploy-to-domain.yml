@@ -1,4 +1,4 @@
-name: Deploy Lobsterboard UI to Vercel
+name: Deploy Lobsterboard UI to Sahjony Capital Domain
 
 on:
   push:
@@ -25,10 +25,15 @@ jobs:
       run: npm run build
     
     - name: Deploy to Vercel
-      uses: vercel/action@v1
+      uses: amondnet/vercel-action@v25
       with:
         vercel-token: ${{ secrets.VERCEL_TOKEN }}
         vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
         vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
         vercel-args: '--prod'
         working-directory: .
+    
+    - name: Configure Domain
+      run: |
+        # Configure domain mapping
+        npx vercel alias set sahjony-capital-lobsterboard.vercel.app www.sahjonycapital.com --token ${{ secrets.VERCEL_TOKEN }}

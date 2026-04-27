@@ -1,0 +1,17 @@
+version: "1"
+services:
+  web:
+    image: node:18-alpine
+    working_dir: /app
+    command: npm run preview
+    ports:
+      - "4173:4173"
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=production
+      - PORT=4173
+    build:
+      steps:
+        - npm ci
+        - npm run build

@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sahjony-lobsterboard
+    env: static
+    buildCommand: npm run build
+    staticPublishPath: dist/client
+    routes:
+      - path: /*
+        dest: /index.html
