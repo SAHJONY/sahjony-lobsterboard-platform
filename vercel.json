@@ -2,21 +2,20 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/server/server.js",
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    },
+    {
+      "src": "api/index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/server/server.js"
+      "dest": "/api/index.js"
     }
   ],
-  "functions": {
-    "dist/server/server.js": {
-      "includeFiles": "dist/client/**"
-    }
-  },
   "installCommand": "npm install",
   "buildCommand": "npm run build"
 }
