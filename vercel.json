@@ -4,10 +4,6 @@
     {
       "src": "dist/server/server.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "dist/client/**",
-      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -16,6 +12,11 @@
       "dest": "/dist/server/server.js"
     }
   ],
+  "functions": {
+    "dist/server/server.js": {
+      "includeFiles": "dist/client/**"
+    }
+  },
   "installCommand": "npm install",
   "buildCommand": "npm run build"
 }
