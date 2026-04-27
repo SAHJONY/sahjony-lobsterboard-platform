@@ -3,146 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahjony Capital LLC - Lobsterboard UI</title>
-    <meta name="description" content="Real Estate Wholesale Platform with Lobsterboard Dashboard">
-    <link rel="icon" href="/favicon.svg">
+    <title>Sahjony Capital LLC - Real Estate Wholesale Platform</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Arial', sans-serif; 
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            color: white; 
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            color: white;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .status-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
             padding: 2rem;
             text-align: center;
         }
-        h1 {
+        .status-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+        .status-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        .status-description {
             opacity: 0.8;
+            line-height: 1.5;
         }
-        .status-box {
-            background: rgba(255,255,255,0.1);
+        .action-section {
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 2rem;
-            margin: 2rem 0;
-            border: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 2rem;
         }
-        .status-item {
-            display: flex;
-            justify-content: space-between;
-            margin: 1rem 0;
-            padding: 1rem;
-            background: rgba(255,255,255,0.05);
-            border-radius: 5px;
-        }
-        .status-label {
-            font-weight: bold;
-        }
-        .status-value {
-            color: #4ecdc4;
-        }
-        .button {
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            margin: 1rem;
-            text-decoration: none;
-            display: inline-block;
-            transition: transform 0.3s;
-        }
-        .button:hover {
-            transform: translateY(-2px);
-        }
-        .instructions {
-            background: rgba(255,255,255,0.1);
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            text-align: left;
-        }
-        .instructions h3 {
+        .action-title {
+            font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #ff6b6b;
         }
-        .instructions ol {
-            margin-left: 1.5rem;
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
-        .instructions li {
-            margin: 0.5rem 0;
-        }
-        .warning {
-            background: rgba(255, 165, 0, 0.2);
-            border-left: 4px solid orange;
-            padding: 1rem;
-            margin: 1rem 0;
+        .btn {
+            background: #3b82f6;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
             border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2563eb;
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            opacity: 0.7;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Sahjony Capital LLC</h1>
-        <h2>Real Estate Wholesale Platform</h2>
-        
-        <div class="status-box">
-            <h3>Platform Status</h3>
-            <div class="status-item">
-                <span class="status-label">GitHub Pages:</span>
-                <span class="status-value">✅ Operational</span>
+        <div class="header">
+            <div class="logo">🏢 Sahjony Capital LLC</div>
+            <div class="subtitle">Real Estate Wholesale Platform</div>
+        </div>
+
+        <div class="status-grid">
+            <div class="status-card">
+                <div class="status-icon">🌐</div>
+                <div class="status-title">GitHub Pages</div>
+                <div class="status-description">✅ Operational - Static content serving platform status dashboard</div>
             </div>
-            <div class="status-item">
-                <span class="status-label">Lobsterboard UI:</span>
-                <span class="status-value">✅ Built & Ready</span>
+            <div class="status-card">
+                <div class="status-icon">📊</div>
+                <div class="status-title">Lobsterboard UI</div>
+                <div class="status-description">✅ Built & Ready - Complete dashboard with AI agents and CRM integration</div>
             </div>
-            <div class="status-item">
-                <span class="status-label">Bland.ai Integration:</span>
-                <span class="status-value">✅ $55.16 Balance</span>
+            <div class="status-card">
+                <div class="status-icon">📞</div>
+                <div class="status-title">Bland.ai Integration</div>
+                <div class="status-description">✅ $55.16 Balance - Autonomous outbound/inbound calling ready</div>
             </div>
-            <div class="status-item">
-                <span class="status-label">AI Agent Architecture:</span>
-                <span class="status-value">✅ Fortune 500 Level</span>
+            <div class="status-card">
+                <div class="status-icon">🤖</div>
+                <div class="status-title">AI Agent Architecture</div>
+                <div class="status-description">✅ Fortune 500 Level - Multi-agent orchestration for 24/7 operation</div>
             </div>
         </div>
 
-        <div class="warning">
-            <strong>Note:</strong> GitHub Pages serves static content only. For full Lobsterboard UI functionality with AI agents and CRM integration, the application needs to run on a platform that supports JavaScript SPAs.
+        <div class="action-section">
+            <div class="action-title">Access Full Lobsterboard UI</div>
+            <div class="action-buttons">
+                <a href="https://github.com/SAHJONY/sahjony-lobsterboard-platform" class="btn" target="_blank">View Repository</a>
+                <a href="https://wholesale-ops-7i7l32jc8-juan-gonzalezs-projects-94b6dfe9.vercel.app" class="btn btn-secondary" target="_blank">Original Platform</a>
+                <button class="btn" onclick="showLocalInstructions()">Local Development</button>
+            </div>
+            
+            <div id="localInstructions" style="display: none; margin-top: 2rem; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 5px;">
+                <h3>Local Development Instructions:</h3>
+                <code style="background: rgba(0,0,0,0.5); padding: 0.5rem; border-radius: 3px; display: block;">
+                    git clone https://github.com/SAHJONY/sahjony-lobsterboard-platform.git<br>
+                    cd sahjony-lobsterboard-platform<br>
+                    npm install<br>
+                    npm run dev
+                </code>
+            </div>
         </div>
 
-        <div class="instructions">
-            <h3>Access Full Lobsterboard UI:</h3>
-            <ol>
-                <li><strong>Local Development:</strong> Clone the repository and run <code>npm run dev</code></li>
-                <li><strong>Production Deployment:</strong> Deploy to Vercel/Netlify for full SPA functionality</li>
-                <li><strong>Current Features:</strong> CRM integration, Bland.ai calling, portfolio management</li>
-                <li><strong>AI Agents:</strong> Acquisition, Disposition, Cash Buyers agents ready</li>
-            </ol>
+        <div class="features-grid">
+            <div class="feature">🏠 CRM Integration</div>
+            <div class="feature">📞 Bland.ai Calling</div>
+            <div class="feature">📊 Portfolio Management</div>
+            <div class="feature">🤖 AI Agents Ready</div>
+            <div class="feature">🎯 Acquisition Agent</div>
+            <div class="feature">💼 Disposition Agent</div>
+            <div class="feature">💰 Cash Buyers Agent</div>
+            <div class="feature">🚀 24/7 Operation</div>
         </div>
 
-        <a href="https://github.com/SAHJONY/sahjony-lobsterboard-platform" class="button">View Repository</a>
-        <a href="https://wholesale-ops-7i7l32jc8-juan-gonzalezs-projects-94b6dfe9.vercel.app" class="button">Original Platform</a>
-        
-        <div style="margin-top: 2rem; opacity: 0.7; font-size: 0.9rem;">
-            <p>Built with Hermes Workspace • TanStack Start SSR • React/TypeScript</p>
-            <p>© 2026 Sahjony Capital LLC. All rights reserved.</p>
+        <div class="footer">
+            Built with Hermes Workspace • TanStack Start SSR • React/TypeScript<br>
+            © 2026 Sahjony Capital LLC. All rights reserved.
         </div>
     </div>
+
+    <script>
+        function showLocalInstructions() {
+            const instructions = document.getElementById('localInstructions');
+            instructions.style.display = instructions.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
